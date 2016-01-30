@@ -59,9 +59,11 @@ struct FUnitStats
 		int32 armour;           // Determines how resistant to damage you are
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
 		int32 size;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
+		int32 range;
 
 	
-	FUnitStats(int32 hp = 10, int32 spd = 3, int32 ap = 3, int32 prw = 10, int32 acc = 10, int32 str = 10, int32 end = 10, int32 agi = 10, int32 wll = 10, int32 intel = 10, int32 arm = 10, int32 sz = 3) {
+	FUnitStats(int32 hp = 10, int32 spd = 3, int32 ap = 3, int32 prw = 10, int32 acc = 10, int32 str = 10, int32 end = 10, int32 agi = 10, int32 wll = 10, int32 intel = 10, int32 arm = 10, int32 sz = 3, int32 rng = 1) {
 		// Death prep procedures here
 		hitPoints = hp;			// How much health you have left before dying
 		maxHitPoints = hp;		// Maximum health you can heal back up to
@@ -79,6 +81,7 @@ struct FUnitStats
 		intelligence = intel;     // Determines strength of spells
 		armour = arm;           // Determines how resistant to damage you are
 		size = sz;
+		range = rng;
 	}
 
 };
@@ -148,7 +151,7 @@ public:
 
 	// Set Stats
 	UFUNCTION(BlueprintCallable, Category = "OnStart")
-		void SetStartingStats(int32 hp = 10, int32 spd = 3, int32 ap = 3, int32 prw = 10, int32 acc = 10, int32 str = 10, int32 end = 10, int32 agi = 10, int32 wll = 10, int32 intel = 10, int32 arm = 10, int32 sz = 3);
+		void SetStartingStats(int32 hp = 10, int32 spd = 3, int32 ap = 3, int32 prw = 10, int32 acc = 10, int32 str = 10, int32 end = 10, int32 agi = 10, int32 wll = 10, int32 intel = 10, int32 arm = 10, int32 sz = 3, int32 rng = 1);
 
 
 	// Hit Point Management
@@ -211,6 +214,8 @@ public:
 		int32 armour;           // Determines how resistant to damage you are
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
 		int32 size;             // Determines how big you are, therefore what you can hide behind
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
+		int32 range;             // Range of your basic attack
 
 
 

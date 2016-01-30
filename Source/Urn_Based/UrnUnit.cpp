@@ -36,7 +36,7 @@ void AUrnUnit::SetupPlayerInputComponent(class UInputComponent* InputComponent)
 
 // Set Starting Stats
 
-void AUrnUnit::SetStartingStats(int32 hp, int32 spd, int32 ap, int32 prw, int32 acc, int32 str, int32 end, int32 agi, int32 wll, int32 intel, int32 arm, int32 sz) {
+void AUrnUnit::SetStartingStats(int32 hp, int32 spd, int32 ap, int32 prw, int32 acc, int32 str, int32 end, int32 agi, int32 wll, int32 intel, int32 arm, int32 sz, int32 rng) {
 
 	// Death prep procedures here
 	hitPoints = hp;			// How much health you have left before dying
@@ -55,6 +55,7 @@ void AUrnUnit::SetStartingStats(int32 hp, int32 spd, int32 ap, int32 prw, int32 
 	intelligence = intel;     // Determines strength of spells
 	armour = arm;           // Determines how resistant to damage you are
 	size = sz;             // Determines how big you are, therefore what you can hide behind
+	range = rng;			// Range of your default attack
 
 
 }
