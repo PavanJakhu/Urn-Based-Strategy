@@ -92,13 +92,13 @@ struct FAttackInfo
 {
 	GENERATED_USTRUCT_BODY()
 
-		UPROPERTY()
+		UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
 		EAttackType attackType;
 
-	UPROPERTY()
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
 		int32 attackStrength;
 
-	UPROPERTY()
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
 		AActor* attackingActor;
 
 	//Set Attack Strength
