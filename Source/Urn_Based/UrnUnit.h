@@ -23,6 +23,68 @@ enum class EAttackType : uint8 {
 
 
 USTRUCT(BlueprintType)
+struct FUnitStats
+{
+	GENERATED_USTRUCT_BODY()
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
+		int32 hitPoints;        // How much health you have left before dying
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
+		int32 maxHitPoints;     // Maximum health you can heal back up to
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
+		int32 speed;            // How far you can move in meters per Action Point
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
+		int32 actionPoints;	    // Action Points allow you to take actions per turn
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
+		int32 maxActionPoints;  // Action Points gained per turn
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
+		int32 powerPoints;      // Power points allow you to cast spells, each spell has a specific power point cost
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
+		int32 maxPowerPoints;   // How many Power points you can have total
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
+		int32 prowess;          // Determines likelihood to hit and be hit in melee
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
+		int32 accuracy;         // Determines likelihood to hit enemies at range
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
+		int32 strength;         // Determines power with which you hit enemies in melee
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
+		int32 endurance;        // Determines how resistant you are to status effects
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
+		int32 agility;          // Determines how well you can dodge attacks that reflexes would assist with
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
+		int32 willpower;        // Determines likelihood you are to retreat and how many Power Points you regenerate each turn
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
+		int32 intelligence;     // Determines strength of spells
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
+		int32 armour;           // Determines how resistant to damage you are
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
+		int32 size;
+
+	
+	FUnitStats(int32 hp = 10, int32 spd = 3, int32 ap = 3, int32 prw = 10, int32 acc = 10, int32 str = 10, int32 end = 10, int32 agi = 10, int32 wll = 10, int32 intel = 10, int32 arm = 10, int32 sz = 3) {
+		// Death prep procedures here
+		hitPoints = hp;			// How much health you have left before dying
+		maxHitPoints = hp;		// Maximum health you can heal back up to
+		speed = spd;					// How far you can move in meters per Action Point
+		actionPoints = ap;	    // Action Points allow you to take actions per turn
+		maxActionPoints = ap;  // Action Points gained per turn
+		powerPoints = intel * 2;      // Power points allow you to cast spells, each spell has a specific power point cost
+		maxPowerPoints = intel * 2;					// How many Power points you can have total
+		prowess = prw;          // Determines likelihood to hit and be hit in melee
+		accuracy = acc;         // Determines likelihood to hit enemies at range
+		strength = str;         // Determines power with which you hit enemies in melee
+		endurance = end;        // Determines how resistant you are to status effects
+		agility = agi;          // Determines how well you can dodge attacks that reflexes would assist with
+		willpower = wll;        // Determines likelihood you are to retreat and how many Power Points you regenerate each turn
+		intelligence = intel;     // Determines strength of spells
+		armour = arm;           // Determines how resistant to damage you are
+		size = sz;
+	}
+
+};
+
+
+USTRUCT(BlueprintType)
 struct FAttackInfo
 {
 	GENERATED_USTRUCT_BODY()
