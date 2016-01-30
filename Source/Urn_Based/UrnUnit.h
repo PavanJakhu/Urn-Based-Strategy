@@ -132,7 +132,7 @@ struct FAttackInfo
 
 
 UCLASS()
-class URN_BASED_API AUrnUnit : public APawn
+class URN_BASED_API AUrnUnit : public ACharacter
 {
 	GENERATED_BODY()
 
