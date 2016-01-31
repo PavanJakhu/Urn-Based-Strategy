@@ -77,6 +77,7 @@ void AUrnUnit::AddHealth(int32 deltaHealth) {
 void AUrnUnit::OutOfHealth() {
 
 	// Death prep procedures here
+	UE_LOG(LogTemp, Warning, TEXT("Death"));
 
 }
 
