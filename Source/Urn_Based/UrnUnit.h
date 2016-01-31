@@ -164,7 +164,7 @@ public:
 	//Damage Calculations
 
 	UFUNCTION(BlueprintCallable, Category = "Damage")
-		virtual void CalculateDamageTaken(FAttackInfo attackInfo);
+		virtual int32 CalculateDamageTaken(FAttackInfo attackInfo);
 
 	// Action Points
 

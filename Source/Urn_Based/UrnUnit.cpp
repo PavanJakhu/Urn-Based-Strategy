@@ -82,7 +82,7 @@ void AUrnUnit::OutOfHealth() {
 }
 
 
-void AUrnUnit::CalculateDamageTaken(FAttackInfo attackInfo) {
+int32 AUrnUnit::CalculateDamageTaken(FAttackInfo attackInfo) {
 
 	int32 damageTaken = attackInfo.GetAttackStrength(); // base damage sent by attacker
 	damageTaken -= myStats.endurance;                              // reduced by Endurance
@@ -91,6 +91,8 @@ void AUrnUnit::CalculateDamageTaken(FAttackInfo attackInfo) {
 		AddHealth(-damageTaken);
 	else
 		AddHealth(0);
+
+	return damageTaken;
 
 }
 
