@@ -178,46 +178,9 @@ public:
 		void RefreshActionPoints();
 
 
-
-
 	// Properties - Character Statistics
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
-		int32 hitPoints;        // How much health you have left before dying
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
-		int32 maxHitPoints;     // Maximum health you can heal back up to
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
-		int32 speed;            // How far you can move in meters per Action Point
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
-		int32 actionPoints;	    // Action Points allow you to take actions per turn
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
-		int32 maxActionPoints;  // Action Points gained per turn
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
-		int32 powerPoints;      // Power points allow you to cast spells, each spell has a specific power point cost
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
-		int32 maxPowerPoints;   // How many Power points you can have total
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
-		int32 prowess;          // Determines likelihood to hit and be hit in melee
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
-		int32 accuracy;         // Determines likelihood to hit enemies at range
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
-		int32 strength;         // Determines power with which you hit enemies in melee
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
-		int32 endurance;        // Determines how resistant you are to status effects
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
-		int32 agility;          // Determines how well you can dodge attacks that reflexes would assist with
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
-		int32 willpower;        // Determines likelihood you are to retreat and how many Power Points you regenerate each turn
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
-		int32 intelligence;     // Determines strength of spells
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
-		int32 armour;           // Determines how resistant to damage you are
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
-		int32 size;             // Determines how big you are, therefore what you can hide behind
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Stats")
-		int32 range;             // Range of your basic attack
-
-
-
+		FUnitStats myStats;        // Contains all my stats	
 	
 };
